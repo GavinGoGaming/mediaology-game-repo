@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OVO</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" style="margin-top: 10%;">
+        <h1>OVO<span id="wait">.</span></h1>
+        <a class="btn btn-large" href="./game.html">start</a>
+        <div class="badge bg-primary" style="margin:5%;display:block;padding:2%">
+            <table class="table" style="background-color:#23272B;border-radius:9px;">
+                <tr class="table-active"><th scope="col">#</th><th scope="col">User</th><th scope="col">Time</th></tr>
+                <tr class="table-active"><th scope="row">1</th><td>bingbong</td><td>13:50:58</td></tr>
+                <tr class="table-active"><th scope="row">2</th><td>The Big Potatoes</td><td>18:46:36</td></tr>
+                <tr class="table-active"><th scope="row">3</th><td>HMAD</td><td>27:36:21</td></tr>
+            </table>
+            <center>Want your time here? Email me at <a href="mailto:foxmoss@mediaology.com">foxmoss@mediaology.com</a></center>
+        </div>
+    </div>
+<script>
+var dots = window.setInterval( function() {
+    var wait = document.getElementById("wait");
+    if ( wait.innerHTML.length > 2 ) 
+        wait.innerHTML = "";
+    else 
+        wait.innerHTML += ".";
+    }, 500);
+</script>
+
+  </body>
+</html>

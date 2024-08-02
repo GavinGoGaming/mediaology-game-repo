@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Kirby</title>
+		<style>
+			#webretro-container {
+				width: 800px;
+				height: 600px;
+			}
+		</style>
+	</head>
+	<body>
+	    <center>
+		<div id="webretro-container"></div>
+		<br>
+		<button onclick="fixctrl() ">set fixed controls</button>
+		<script type="text/javascript" src="embed.js"></script>
+		<script>
+			webretroEmbed(document.getElementById("webretro-container"), "../core", {core: "autodetect", rom: "kirby.gba"});
+			function fixctrl() {
+        document.getElementById('fun').contentWindow.savedKeybindsObj = Object.assign({}, document.getElementById('fun').contentWindow.configStrToObj('input_player1_start = "enter"\ninput_player1_select = "space"\ninput_player1_l = "shift"\ninput_player1_l2 = "ctrl"\ninput_player1_r = "alt"\ninput_player1_r2 = "backslash"\ninput_player1_a = "z"\ninput_player1_b = "x"\ninput_player1_x = "y"\ninput_player1_y = "t"\ninput_player1_up = "up"\ninput_player1_left = "left"\ninput_player1_down = "down"\ninput_player1_right = "right"\ninput_player1_l_x_minus = "a"\ninput_player1_l_x_plus = "d"\ninput_player1_l_y_minus = "w"\ninput_player1_l_y_plus = "s"\ninput_player1_l3_btn = "f"\ninput_player1_r_x_minus = "j"\ninput_player1_r_x_plus = "l"\ninput_player1_r_y_minus = "i"\ninput_player1_r_y_plus = "k"\ninput_player1_r3_btn = "comma"\ninput_menu_toggle = "f1"\ninput_save_state = "f2"\ninput_load_state = "f3"\ninput_screenshot = "f4"\ninput_hold_fast_forward = "nul"\ninput_toggle_fast_forward = "nul"\n'));
+        document.getElementById('fun').contentWindow.window.localStorage.setItem("RetroArch_settings_keybinds", document.getElementById('fun').contentWindow.configObjToStr(document.getElementById('fun').contentWindow.savedKeybindsObj));
+        document.getElementById('fun').contentWindow.tryApplyConfig();
+        alert("Fixed!");
+        document.getElementById('fun').contentWindow.focus();
+}
+		</script>
+		</center>
+	</body>
+</html>
