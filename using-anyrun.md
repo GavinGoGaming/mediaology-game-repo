@@ -3,7 +3,8 @@
 1. Make a free account on ANY.RUN (Requires email verification)
 2. Make an analysis:
 
-** SIMPLE MODE **
+**SIMPLE MODE**
+
 ![image](https://github.com/user-attachments/assets/9783dcfa-620d-4119-b5db-ddc0dab9989c)
 
 
