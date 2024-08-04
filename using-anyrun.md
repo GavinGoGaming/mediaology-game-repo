@@ -1,7 +1,11 @@
 # Using ANY.RUN for VMs
 
 1. Make a free account on ANY.RUN (Requires email verification)
-3. Start an analysis of "google.com" in browser. Select your browser, OS (win 10), 60 SECONDS! and begin.
+2. Make an analysis:
+
+** SIMPLE MODE **
+![image](https://github.com/user-attachments/assets/9783dcfa-620d-4119-b5db-ddc0dab9989c)
+
 
 ### AnyRun's UI
 
