@@ -1,14 +1,21 @@
 # Using ANY.RUN for VMs
 
-1. Make a free account on ANY.RUN (Requires email verification)
-2. Make an analysis:
+## VM Creation
 
-**SIMPLE MODE**
+to use ANYRUN, you ***must create an account outside of Glacier***.
+
+Use a mobile device or another computer to *create* the account, then:
+
+- Open ANY.RUN
+- Login with your details
+- Create a "New analysis" in Simple mode. It should look like this:
+
+(p.s. anyrun vms last a max of 5 minutes, i reccomend triage but if this works for you it works)
 
 ![image](https://github.com/user-attachments/assets/9783dcfa-620d-4119-b5db-ddc0dab9989c)
 
 
-### AnyRun's UI
+### AnyRun's UI (Guide)
 
 Anyrun's UI has 4 main seconds: The VM, Control Panel, HTTP Monitor, and Process Monitor.
 
