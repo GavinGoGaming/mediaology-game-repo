@@ -16,40 +16,33 @@
 <script type="text/javascript" src="classes.js"></script>
 <script type="text/javascript" src="eagswebrtc.js"></script>
 <script type="text/javascript">
-if(document.location.href.startsWith("file:")) {
-alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation");
-}else {
-window.addEventListener("load", function(){
-const relayId = Math.floor(Math.random() * 3);
-window.eaglercraftOpts = {
-container: "game_frame", assetsURI: "assets.epk", serverWorkerURI: "worker_bootstrap.js", worldsFolder: "MAIN",
-servers: [
-	{ serverName: "WebMC", serverAddress: "wss://webmc.xyz/server", hideAddress: false },
-	{ serverName: "EagleSMP", serverAddress: "wss://eagler.eaglesmp.org", hideAddress: false },
-],
-relays: [
-	{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
-	{ addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
-	{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
-],
-mainMenu: { splashes: [
-"Darviglet!", "eaglerenophile!", "You Eagler!", "Yeeeeeee!", "yeee",
-"EEEEEEEEE!", "You Darvig!", "You Vigg!", ":>", "|>", "You Yumpster!"
-], eaglerLogo: false }};
-(function(){
-var q = window.location.search;
-if(typeof q === 'string' && q.startsWith("?")) {
-	q = new URLSearchParams(q);
-	var s = q.get("server");
-	if(s) window.eaglercraftOpts.joinServer = s;
-}
-})();
-main();document.body.insertAdjacentHTML("afterbegin", `<div id="_gl_div" style="width:100vw;height:100vh;z-index:9999;background:#111;color:white;display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;"><p id="_gl_c2s">click me to start</p></div>`);
-document.querySelector("#_gl_c2s").addEventListener('click', (e)=>{
-    document.querySelector("#_gl_div").remove();
-});
-});}
-</script>
+	if(document.location.href.startsWith("file:")) {
+	alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation");
+	}else {
+	window.addEventListener("load", function(){
+	
+	// %%%%%%%%% launch options %%%%%%%%%%%%
+	
+	const relayId = Math.floor(Math.random() * 3);
+	async function fetchOpts() {
+		await fetch("/launchOpts_1.5.js").then(r => r.text()).then(r => eval(r));
+	}
+	
+	// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	var q = window.location.search;
+	if(typeof q === 'string' && q.startsWith("?")) {
+		q = new URLSearchParams(q);
+		var s = q.get("server");
+		if(s) window.minecraftOpts.push(s);
+	}
+	async function startGame() {
+		await fetchOpts();
+		main();
+	}
+	startGame();
+	});}
+	</script>
 </head>
 <body style="margin:0px;width:100vw;height:100vh;" id="game_frame">
 </body>
