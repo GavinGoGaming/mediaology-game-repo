@@ -456,7 +456,7 @@ function displayGui() {
           
           const relayId = Math.floor(Math.random() * 3);
           async function fetchOpts() {
-            await fetch("/launchOpts_1.8.js").then(r => r.text()).then(r => eval(r));
+            await fetch("/mediaology-game-repo/launchOpts_1.8.js").then(r => r.text()).then(r => eval(r));
           }
       
           // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
