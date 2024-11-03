@@ -6,13 +6,14 @@
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
     <script type = text/javascript>
 		window.addEventListener("load", function() {
+			async function fetchOpts() {
+				await fetch("/mediaology-game-repo/launchOpts_1.8.js").then(r => r.text()).then(r => eval(r));
+			}
 			window.config = {
 				gameContainer: "game", assetsLocation: "resources.mc", playerUsername: null, serverIP: null, joinServerOnLaunch: false
 			};
-			main();document.body.insertAdjacentHTML("afterbegin", `<div id="_gl_div" style="width:100vw;height:100vh;z-index:9999;background:#111;color:white;display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;"><p id="_gl_c2s">click me to start</p></div>`);
-document.querySelector("#_gl_c2s").addEventListener('click', (e)=>{
-    document.querySelector("#_gl_div").remove();
-});
+			await fetchOpts();
+			main();
 		});
 
 	    document.esc = false;
