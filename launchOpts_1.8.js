@@ -39,7 +39,7 @@ window.eaglercraftXOpts = {
 };
 
 setTimeout(()=>{
-    document.body.insertAdjacentHTML("afterbegin", `<div id="_gl_div" style="width:100vw;height:100vh;z-index:9999;background:#111;color:white;display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;"><p id="_gl_c2s">click me to start</p></div>`);
+    document.body.insertAdjacentHTML("afterbegin", `<div id="_gl_div" style="width:100vw;height:100vh;z-index:9999;background:#111;color:white;display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;"><p id="_gl_c2s">Click on this text to start</p></div>`);
 document.querySelector("#_gl_c2s").addEventListener('click', (e)=>{
     document.querySelector("#_gl_div").remove();
 });
@@ -54,7 +54,7 @@ const e = document.createElement('button');
     e.style.background = "#333";
     e.style.borderRadius = "6px";
     e.addEventListener('click', ()=>{
-    document.body.insertAdjacentHTML("afterbegin", `<div id="_gl_div" style="width:100vw;height:100vh;z-index:9999;background:#111;color:white;display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;"><p id="_gl_c2s">click me to start</p></div>`);
+    document.body.insertAdjacentHTML("afterbegin", `<div id="_gl_div" style="width:100vw;height:100vh;z-index:9999;background:#111;color:white;display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;"><p id="_gl_c2s">Click on this text to start</p></div>`);
 document.querySelector("#_gl_c2s").addEventListener('click', (e)=>{
     document.querySelector("#_gl_div").remove();
 });
