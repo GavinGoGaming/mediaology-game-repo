@@ -1,6 +1,5 @@
-# Glacier game repo
+# Mediaology Game Repository (archive)
 
-ORIGINALY "Mediaology Game Repo" as it was an archive of Mediaology (fishme.me)'s games.
 
 only like 1/2 of them, i was too lazy and didnt wanna crash foxmoss's servers lmao
 
